@@ -1,0 +1,9 @@
+services:
+  cyber-sentinel:
+    build: .
+    container_name: cyber-sentinel-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data:ro
+    restart: unless-stopped
